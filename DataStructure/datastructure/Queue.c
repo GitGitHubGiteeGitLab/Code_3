@@ -21,6 +21,7 @@ Queue *initQueue(int n){
     q->data = (int *)malloc(sizeof(int) * n);
     q->size = n;
     q->cnt = q->head = q->tail = 0;
+    return q;	
 }
 
 //入队
