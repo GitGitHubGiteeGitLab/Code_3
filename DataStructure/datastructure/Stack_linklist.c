@@ -23,10 +23,10 @@ typedef struct Stack{
 }Stack;
 
 //初始化
-Stack *initStack(int n){
+Stack *initStack(){
     Stack *s = (Stack *)malloc(sizeof(Stack));
     s->hnode.next = NULL;
-    s->size = n;
+    s->size = 0;
     return s;
 }
 
@@ -97,7 +97,7 @@ int top(Stack *s){
 
 int main(){
     srand((unsigned)time(NULL));
-    Stack *s = initStack(20);
+    Stack *s = initStack();
     int op, val;
     for(int i = 0; i < 20; i++){
         op = rand() % 4;
