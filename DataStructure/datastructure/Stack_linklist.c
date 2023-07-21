@@ -40,6 +40,7 @@ int push(Stack *s, int val){
     p->data = val;
     p->next = s->hnode.next;
     s->hnode.next = p;
+    s->size += 1;
     return 1;
 }
 
@@ -57,6 +58,7 @@ int pop(Stack *s){
     ListNode *p = s->hnode.next;
     s->hnode.next = p->next;
     free(p);
+    s->size -= 1;
     return 1;
 }
 
