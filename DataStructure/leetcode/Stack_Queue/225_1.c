@@ -47,7 +47,7 @@ int myQueuePop(MyQueue *q){
     return tmp;
 }
 
-int myQueueTop(MyQueue *q){
+int myQueueFront(MyQueue *q){
     if(!q || !q->data)return 0;
     if(myQueueEmpty(q))return 0;
     return q->data[q->head];
@@ -96,7 +96,7 @@ int myStackPop(MyStack* obj) {
 
 int myStackTop(MyStack* obj) {
     if(!obj)return 0;
-    return myQueueTop(obj->queue1);
+    return myQueueFront(obj->queue1);
 }
 
 bool myStackEmpty(MyStack* obj) {
