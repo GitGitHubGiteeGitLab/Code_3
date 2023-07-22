@@ -40,7 +40,7 @@ int myStackPop(MyStack *s){
 
 int myStackTop(MyStack *s){
     if(myStackEmpty(s))return 0;
-    return s->data[s->top + 1];
+    return s->data[s->top];
 }
 
 void myStackFree(MyStack *s){
