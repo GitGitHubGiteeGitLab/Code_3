@@ -18,7 +18,7 @@ int is_prime(int n){
 }
 
 int main(){
-    for(int i = 1; i < N + 1; i++){
+    for(int i = 2; i < N + 1; i++){
         if(!is_prime(i))continue;
         printf("%d\n", i);
     }
