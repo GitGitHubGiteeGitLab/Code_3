@@ -21,13 +21,14 @@ void init_prime(int *prime, int n){
 int main(){
     int *prime = calloc(N, sizeof(int));
     init_prime(prime, N);
-    int i, count =0, n;
+    int n;
     scanf("%d", &n);
-    for(i = 2; ; i++){
-        if(prime [i + 1] - prime[i] == 2)count++;
-        if(count == n)break;
+    for(int i = 1; i <= prime[0]; i++){
+        if(prime [i + 1] - prime[i] == 2)n--;
+        if(n)continue;
+        printf("%d %d\n", prime[i], prime[i + 1]);
+        break;
     }
-    printf("%d %d\n", prime[i], prime[i + 1]);
     return 0;
 }
 
